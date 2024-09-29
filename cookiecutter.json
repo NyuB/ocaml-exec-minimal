@@ -1,0 +1,9 @@
+{
+    "name": "main",
+    "main_name": "{{ cookiecutter.name.lower().replace(' ', '_').replace('-', '_').replace('.', '_') }}",
+    "description": "An awesome tool !",
+    "libraries": "",
+    "author": "Me",
+    "repository": "{{cookiecutter.author}}/{{cookiecutter.name}}",
+    "repository_url": "https://github.com/{{ cookiecutter.repository }}"
+}

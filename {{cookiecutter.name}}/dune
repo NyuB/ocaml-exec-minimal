@@ -1,0 +1,7 @@
+(executable
+ (public_name {{ cookiecutter.main_name }})
+ (name {{ cookiecutter.main_name }})
+ (libraries {{ cookiecutter.libraries }}))
+
+(cram
+ (deps %{bin:{{ cookiecutter.main_name }}}))

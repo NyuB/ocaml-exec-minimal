@@ -1,0 +1,25 @@
+(lang dune 3.16)
+
+(name {{cookiecutter.main_name}})
+
+(generate_opam_files true)
+
+(source
+ (github {{cookiecutter.repository}}))
+
+(authors "{{cookiecutter.author}}")
+
+(maintainers "{{cookiecutter.author}}")
+
+(license LICENSE)
+
+(documentation {{cookiecutter.repository_url}})
+
+(package
+ (name {{cookiecutter.main_name}})
+ (synopsis "{{cookiecutter.description}}")
+ (description "{{cookiecutter.description}}")
+ (depends ocaml dune {{cookiecutter.libraries}})
+ (tags ()))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
