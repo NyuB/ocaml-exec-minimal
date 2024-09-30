@@ -5,7 +5,7 @@
 **NB**: The [cookiecutter documentation](https://cookiecutter.readthedocs.io/en/stable/usage.html) will always be the most up-to-date regarding cookiecutter usage. The following instruction are just a quickstart helper.
 
 ```console
-$ cookiecutter gh:https://github.com/NyuB/ocaml-exec-minimal
+$ cookiecutter gh:NyuB/ocaml-exec-minimal
 [1/7] name (main): my-awesome-tool
 [2/7] main_name (my_awesome_tool):
 ...
