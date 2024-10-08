@@ -1,0 +1,30 @@
+# This file is a stub to ease CI for the template project, run dune build to generate the actual opam file corresponding to your dune-project file 
+opam-version: "2.0"
+synopsis: "{{cookiecutter.description}}"
+description: "{{cookiecutter.description}}"
+maintainer: ["{{cookiecutter.author}}"]
+authors: ["{{cookiecutter.author}}"]
+license: "LICENSE"
+homepage: "{{cookiecutter.repository_url}}"
+doc: "{{cookiecutter.repository_url}}"
+bug-reports: "{{cookiecutter.repository_url}}/issues"
+depends: [
+  "ocaml"
+  "dune" {>= "3.16"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+{{cookiecutter.repository_url}}.git"
