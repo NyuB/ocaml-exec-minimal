@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Create default template
+        run: |
+          python3 -m pip install cookiecutter
+          make default
+        
+      - name: Set-up OCaml
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: 5.2
+
+      - run: opam install main/ --deps-only --with-test
+
+      - name: Run the default dev target of the generated project
+        run: |
+          opam exec -- make -C main

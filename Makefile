@@ -1,0 +1,2 @@
+default:
+	cookiecutter --no-input .
