@@ -19,7 +19,7 @@
  (name {{cookiecutter.main_name}})
  (synopsis "{{cookiecutter.description}}")
  (description "{{cookiecutter.description}}")
- (depends ocaml dune {{cookiecutter.libraries}})
+ (depends ocaml dune (ocamlformat :with-test) {{cookiecutter.libraries}})
  (tags ()))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

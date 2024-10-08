@@ -11,6 +11,7 @@ bug-reports: "{{cookiecutter.repository_url}}/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.16"}
+  "ocamlformat" {with-test}
   "odoc" {with-doc}
 ]
 build: [
