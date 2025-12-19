@@ -1,5 +1,7 @@
 # Cookiecutter template for a minimal OCaml executable
 
+[![CI](https://github.com/NyuB/ocaml-exec-minimal/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/NyuB/ocaml-exec-minimal/actions/workflows/ci.yml)
+
 ## Usage
 
 **NB**: The [cookiecutter documentation](https://cookiecutter.readthedocs.io/en/stable/usage.html) will always be the most up-to-date regarding cookiecutter usage. The following instruction are just a quickstart helper.
